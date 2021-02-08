@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+   <nav class="navbar navbar-light bg-light">
+    <form action ="#" method="post" style=" max-width: 700px;margin: auto;">
+        <button type="submit" class="btn btn-primary" name="submit_button" value="Load data"/>Load data</button>
+        <br><br><br>
+        <p><b>Insert job title:</b></p>
+        <p><input type="text" name="job" /></p>
+        <button type="submit" class="btn btn-primary" name="submit_button" value="candidate finder"/>Find me a candidate</button>
+    </form>
+    </nav>
+{% endblock %}

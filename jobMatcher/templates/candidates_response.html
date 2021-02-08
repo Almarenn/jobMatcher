@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+    <li><b>Best candidates are:</b><br><br>
+    <ol>
+    {% for candidate in candidates%}
+    <li>{{candidate.name}}</li><br>
+    {%  endfor %}
+    </ol>
+    </li>
+</nav>
+{% endblock %}
