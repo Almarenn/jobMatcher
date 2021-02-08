@@ -24,7 +24,7 @@ def home():
 def candidate_finder(job_title):
     match = Matcher(job_title=job_title)
     match.candidate_finder()
-    candidates_list = match.get_candidates()
+    candidates_list = match.get_best_candidates()
     if not candidates_list:
         return f"<h1>No candidate was found for this job</h1>"
     else:
@@ -34,8 +34,8 @@ def candidate_finder(job_title):
 #initiate db with skills, jobs and candidates
 @app.route('/load_data')
 def load_data():
-    # db.drop_all()
-    # db.create_all()
+    #db.drop_all()
+    db.create_all()
     Candidate.query.delete()
     Job.query.delete()
     Skill.query.delete()

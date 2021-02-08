@@ -23,7 +23,7 @@ class Matcher:
     #save search results into DB for not having to search candidates again for this job next time
     def _save_candidates_for_this_job(self):
         job_ins = Job.query.filter_by(title=self.job_title).first()
-        for candidate in self.candidates:
+        for candidate in self.best_candidates:
             candidate.job = job_ins
         db.session.commit()
 
@@ -53,7 +53,7 @@ class Matcher:
     def _best_candidates_already_in_db(self):
         ideal_candidates = Candidate.query.join(Candidate.job).filter_by(title=self.job_title).all()
         if ideal_candidates:
-            self.candidates = ideal_candidates
+            self.best_candidates = ideal_candidates
             return True
         return False
 
