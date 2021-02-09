@@ -1,23 +1,30 @@
-# resource_manager_service
+# Job matcher application
 
-### Build application
-Build the Docker image manually by cloning the Git repo.
+### Pre Requirements
+
+Open terminal and install flask-sqlalchemy
 ```
-$ git clone https://github.com/eitanief/FlaskHomeAssignment.git
+$ pip install flask-sqlalchemy
 ```
-inside "FlaskHomeAssignment" folder:
+
+Clone this Git repo.
 ```
-$ docker build -t eitanief/resource_manager_service .
+$ git clone https://github.com/Almarenn/jobMatcher.git
 ```
+
 
 ### Run the container
-Create a container from the image.
+inside "jobMatcher" folder:
 ```
-$ docker run -it -p 7080:7080 eitanief/resource_manager_service
-
+$ python run.py 
 ```
 
-Notice that POST requests are designed to work with JSON body as argument
+Click on "Load data" button and start searching for the best candidates of a job.
+The jobs that are supported are:
+1. software developer
+2. product manager
+3. bookkeeper
+4. qa engineer
 
 
 
