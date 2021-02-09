@@ -13,7 +13,7 @@ $ git clone https://github.com/Almarenn/jobMatcher.git
 ```
 
 
-### Run the container
+### Run the application
 inside "jobMatcher" folder:
 ```
 $ python run.py 
