@@ -19,8 +19,8 @@ inside "jobMatcher" folder:
 $ python run.py 
 ```
 
-Click on "Load data" button and start searching for the best candidates of a job.
-The jobs that are supported are:
+Click on "Load data" button and start searching for the best candidates for a job.
+The supported jobs are:
 1. software developer
 2. product manager
 3. bookkeeper
